@@ -69,18 +69,26 @@ let Tom = {
     location: 'Vienna',
 
     print: function() {
-        return 
+        return `Tom is working in ${this.job} and is ${this.age} old located in ${this.location}`
     }
 }
 
 let Jimmy = {
     job: 'Construction',
     age: 48,
-    location: 'Bratislava'
+    location: 'Bratislava',
+
+    print: function() {
+        return `Tom is working in ${this.job} and is ${this.age} old located in ${this.location}`
+    }
 }
 
 let Robert = {
     job: 'Taxi Driver',
     age: 44,
-    location: 'New York'
+    location: 'New York',
+
+    print: function() {
+        return `Tom is working in ${this.job} and is ${this.age} old located in ${this.location}`
+    }
 }
