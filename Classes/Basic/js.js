@@ -83,8 +83,35 @@ class Marriage extends Person {
 
 const tommy = new Marriage('Tommy', 'IT', 'Vienna', true)
 
-console.log(tommy.print() + tommy.marriage())
+class motorbike extends Car {
+    numberWheels;
 
-document.getElementById('text').innerHTML = `
-    <h1>${tommy.print()}${tommy.marriage()}</h1>
-`
+    constructor(brand, fuel, age, numberWheels) {
+        super(brand, fuel, age)
+
+        this.numberWheels = numberWheels
+    }
+
+    print() {
+        return `This motorbike is the brand of ${this.brand} is ${this.fuel} fuel type. It's built in ${this.age} and has ${this.numberWheels} wheels`
+    }
+}
+
+const kawasaki = new motorbike('Kawasaki', 'gasoline', 2020, 2)
+
+class fish extends Animal {
+    habitat;
+
+    constructor(name,age,type,habitat) {
+        super(name,age,type) 
+        this.habitat = habitat
+    }
+
+    print() {
+        return `Fish is an ${this.type} and its living on ${this.habitat}. Lifespan is around ${this.age} years and its name is ${this.name}`
+    }
+}
+
+const shark = new fish('Shark', 30, 'Animal', 'Sea')
+
+console.log(shark.print())
